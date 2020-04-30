@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "labo4-practica-parcial"
+    }
+  },
+  "defaultProject": "labo4-practica-parcial",
+  "cli": {
+    "analytics": "1cdd75db-7897-417e-b73d-1273d1a060a8"
+  }
 }
