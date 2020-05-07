@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { PeliculaService } from 'src/app/servicios/pelicula.service';
+import { Pelicula } from 'src/app/clases/pelicula';
+import { timer } from 'rxjs';
+
 
 @Component({
   selector: 'app-pelicula-listado',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PeliculaListadoComponent implements OnInit {
 
-  constructor() { }
+  peliculas: Pelicula[];
+  peliculaSeleccionada: Pelicula;
+  constructor( private peliculaService: PeliculaService) { }
 
   ngOnInit(): void {
+    this.peliculas = this.peliculaService.obtenerPelicula();
   }
 
+  enviarPeliculaSeleccionada( event ){
+    this.peliculaSeleccionada = event;
+  }
+
+  eliminar( id ){
+    this.peliculaService.eliminarPelicula(id);
+    this.peliculas=this.peliculaService.obtenerPelicula();
+  }
 }

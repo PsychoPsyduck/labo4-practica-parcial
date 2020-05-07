@@ -1,1 +1,12 @@
-<p>pelicula-listado works!</p>
+<app-cabecera></app-cabecera>
+<mat-card>
+
+    <mat-card-title>PELICULAS LISTADO</mat-card-title>
+
+
+    <div class="container">
+    
+        <app-pelicula-tabla (peliculaSeleccionada)="enviarPeliculaSeleccionada($event)" [peliculas]="this.peliculas" ></app-pelicula-tabla>
+        <app-detalle-pelicula (eliminarPelicula)="eliminar($event)" [detallePelicula]="this.peliculaSeleccionada" > </app-detalle-pelicula>
+    </div>
+</mat-card>

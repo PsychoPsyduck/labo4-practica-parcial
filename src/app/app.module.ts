@@ -10,9 +10,17 @@ import { ActorListadoComponent } from './componentes/actor-listado/actor-listado
 import { PeliculaListadoComponent } from './componentes/pelicula-listado/pelicula-listado.component';
 import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.component';
 import { MaterialComponent } from './componentes/material/material.component';
-import { PeliculasComponent } from './componentes/peliculas/peliculas.component';
-import { ActoresComponent } from './componentes/actores/actores.component';
 import { FormsModule } from '@angular/forms';
+import { PeliculaTablaComponent } from './componentes/pelicula-tabla/pelicula-tabla.component';
+import { PeliculaService } from './servicios/pelicula.service';
+import { ActorService } from './servicios/actor.service';
+import { TablaActorComponent } from './componentes/tabla-actor/tabla-actor.component';
+import { DetallePeliculaComponent } from './componentes/detalle-pelicula/detalle-pelicula.component';
+import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
+import { PaisesListadoComponent } from './componentes/paises-listado/paises-listado.component';
+import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component'
 
 @NgModule({
   declarations: [
@@ -23,16 +31,26 @@ import { FormsModule } from '@angular/forms';
     ActorListadoComponent,
     PeliculaListadoComponent,
     BienvenidoComponent,
-    MaterialComponent,
-    PeliculasComponent,
-    ActoresComponent
+    PeliculaTablaComponent,
+    TablaActorComponent,
+    DetallePeliculaComponent,
+    CabeceraComponent,
+    PaisesListadoComponent,
+    DetallePaisComponent,
+    TablaPaisesComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MaterialComponent
   ],
-  providers: [],
+  providers: [
+    PeliculaService,
+    ActorService
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

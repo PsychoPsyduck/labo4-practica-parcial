@@ -1,1 +1,9 @@
-<p>pelicula-alta works!</p>
+<button [routerLink]="['/Bienvenido']" routerLinkActive="router-link-active"  >volver Bienvenido</button>
+
+
+
+
+  <button type="submit" [disabled]="!formulario">Submit</button>
+  <br>
+
+<app-tabla-actor [actores]="this.actores" ></app-tabla-actor>

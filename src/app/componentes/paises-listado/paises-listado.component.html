@@ -1,0 +1,8 @@
+
+<app-cabecera></app-cabecera>
+<mat-card>
+    <mat-card-title>Tabla Paises</mat-card-title>
+
+    <app-tabla-paises [paises]="this.paisesServicio" (paisSelected)="verDetalles($event)"></app-tabla-paises>
+
+</mat-card>
