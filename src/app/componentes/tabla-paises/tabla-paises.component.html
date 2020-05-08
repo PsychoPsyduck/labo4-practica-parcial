@@ -1,12 +1,12 @@
 <mat-card>
-    <table class="table">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Capital</th>
-            <th scope="col">Poblacion</th>
-            <th scope="col">Foto</th>
-        </tr>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Capital</th>
+                <th scope="col">Poblacion</th>
+                <th scope="col">Foto</th>
+            </tr>
         </thead>
         <tbody>
             <tr *ngFor="let pais of paises" (click)="seleccionPais(pais)">

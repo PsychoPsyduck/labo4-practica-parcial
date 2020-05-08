@@ -2,13 +2,13 @@
 
 <mat-card>
 
-    <div  *ngIf="detallePais" class="card" style="width: 10%;">
-        <img [src]="this.detallePais.flag" class="card-img-top" style="width: 20%;">
-        <div class="card-body">
-            <h2 class="card-title">{{detallePais.nombre}}</h2>
-            <p class="card-text">Capital: {{detallePais.capital}}</p>
-            <p class="card-text">Poblacion: {{detallePais.poblacion}}</p>
-            <button class="btn btn-danger btn-block" (click)="desabilitar()" >Desabilitar Pais</button>
+    <div  *ngIf="detallePais" style="width: 10%;">
+        <img [src]="this.detallePais.flag"  style="width: 20%;">
+        <div >
+            <h2 >{{detallePais.nombre}}</h2>
+            <p >Capital: {{detallePais.capital}}</p>
+            <p >Poblacion: {{detallePais.poblacion}}</p>
+            <button  (click)="desabilitar()" >Desabilitar Pais</button>
         
         </div>
     </div>

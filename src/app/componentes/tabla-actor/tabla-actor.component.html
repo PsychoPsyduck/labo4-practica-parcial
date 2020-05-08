@@ -5,7 +5,7 @@
 <table>
   <tr>
     <th scope="col">Nombre</th>
-    <th scope="col">Fecha de Nacimiento</th>
+    <th scope="col">Nacimiento</th>
     <th scope="col">Sexo</th>
     <th scope="col">Foto</th>
     <th scope="col">Origen</th>
@@ -14,8 +14,8 @@
     <th>{{actor.Nombre}} {{actor.apellido}}</th>
     <td>{{actor.FechaNacimiento}}</td>
     <td>{{actor.sexo}}</td>
-    <td> <img [src]="actor.Foto" width="80px" > </td>
+    <td> <img [src]="actor.Foto" width="width: 5%;" > </td>
     
-    <img [src]="actor.PaisOrigen.flag" class="card-img-top" style="width: 10%;">
+    <td><img [src]="actor.PaisOrigen.flag" style="width: 10%;"> </td>
   </tr>
 </table>

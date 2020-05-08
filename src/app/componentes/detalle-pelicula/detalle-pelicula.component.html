@@ -1,20 +1,11 @@
-
-
-
-
-
-
-
-
-
-<div  *ngIf="detallePelicula" class="card" style="width: 18rem;">
-    <img [src]="this.detallePelicula.foto" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{detallePelicula.nombre}}</h5>
-      <p class="card-text">{{detallePelicula.tipo}}</p>
-      <p class="card-text">{{detallePelicula.fecha_estreno}}</p>
-      <p class="card-text">{{detallePelicula.cantidad_publico}}</p>
-      <button class="btn btn-danger btn-block"  (click)="borrarPelicula()">Borrar Pelicula</button>
-      
-    </div>
+<div  *ngIf="detallePelicula" style="width: 18rem;">
+  <img [src]="this.detallePelicula.foto" alt="...">
+  <div >
+    <p >{{detallePelicula.nombre}}</p>
+    <p >{{detallePelicula.tipo}}</p>
+    <p >{{detallePelicula.fecha_estreno}}</p>
+    <p >{{detallePelicula.cantidad_publico}}</p>
+    <button  (click)="borrarPelicula()">Borrar Pelicula</button>
+    
   </div>
+</div>

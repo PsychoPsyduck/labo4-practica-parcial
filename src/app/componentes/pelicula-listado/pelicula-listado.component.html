@@ -1,10 +1,10 @@
 <app-cabecera></app-cabecera>
 <mat-card>
 
-    <mat-card-title>PELICULAS LISTADO</mat-card-title>
+    <mat-card-title>Peliculas</mat-card-title>
 
 
-    <div class="container">
+    <div >
     
         <app-pelicula-tabla (peliculaSeleccionada)="enviarPeliculaSeleccionada($event)" [peliculas]="this.peliculas" ></app-pelicula-tabla>
         <app-detalle-pelicula (eliminarPelicula)="eliminar($event)" [detallePelicula]="this.peliculaSeleccionada" > </app-detalle-pelicula>
