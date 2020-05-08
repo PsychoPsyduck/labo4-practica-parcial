@@ -11,13 +11,12 @@ import { Pais } from 'src/app/clases/pais';
 export class ActorAltaComponent implements OnInit {
 
   
-  paises:pais[];
+  paises:Pais[];
+
   constructor( private paisesService:PaisesService ) { }
 
   ngOnInit(): void {
-    this.paisesService.obtenerPaises().subscribe( resp=>{
-      this.paises=resp;
-    } )
+    this.paises = this.paisesService.obtenerPaises();
   }
 
 }
