@@ -8,11 +8,13 @@
     <th scope="col">Fecha de Nacimiento</th>
     <th scope="col">Sexo</th>
     <th scope="col">Foto</th>
+    <th scope="col">Origen</th>
   </tr>
   <tr *ngFor="let actor of actores" (click)="seleccionado(actor)" >
     <th>{{actor.Nombre}} {{actor.apellido}}</th>
     <td>{{actor.FechaNacimiento}}</td>
     <td>{{actor.sexo}}</td>
+    <td> <img [src]="actor.Foto" width="80px" > </td>
     
     <img [src]="actor.PaisOrigen.flag" class="card-img-top" style="width: 10%;">
   </tr>
