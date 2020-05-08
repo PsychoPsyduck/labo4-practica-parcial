@@ -1,6 +1,31 @@
 <app-cabecera></app-cabecera>
 
 <mat-card>
+    <div>
+        <form  > 
+            <!-- [formGroup]="formulario" -->
+        
+            Nombre:
+            <input class="form-control" type="text" placeholder="name" formControlName="Nombre">
+            <br>
+            Apellido:
+            <input class="form-control" type="text" placeholder="name" formControlName="Apellido">
+        
+            Nacimiento:
+            <input class="form-control" type="date" formControlName="FechaNacimiento">
+        
+            Sexo:
+            <input class="form-control" type="text" formControlName="sexo">
+            <br>
+            <button type="button" [disabled]="!formulario.valid" (click)="onSubmit()" >Dar de alta</button>
+        </form>
+        <br>
+        <app-detalle-pais *ngIf="this.paisSeleccionado" [detallePais]="this.paisSeleccionado" ></app-detalle-pais>
+        <p *ngIf="!this.paisSeleccionado" >Seleccione un pais</p>
 
-    <app-tabla-paises [paises]="this.paises" ></app-tabla-paises>
+    </div>
+
+
+    <br>
+    <app-tabla-paises [paises]="this.paises" (paisSelected)="seleccionoPais($event)" ></app-tabla-paises>
 </mat-card>

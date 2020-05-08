@@ -4,6 +4,10 @@
 
     <mat-card-title>Actor Listado</mat-card-title>
 
-    <app-tabla-actor [actores]="this.actores" ></app-tabla-actor>
+    <app-tabla-actor [actores]="this.actores" (actorSeleccionado)="actorSelected($event)" ></app-tabla-actor>
+
+    <app-detalle-pais *ngIf="this.selectedActor" [detallePais]="this.selectedActor.PaisOrigen" ></app-detalle-pais>
+    
+    <app-detalle-actor *ngIf="this.selectedActor" [actor]="this.selectedActor" ></app-detalle-actor>
 
 </mat-card>

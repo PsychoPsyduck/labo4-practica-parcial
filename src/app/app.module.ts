@@ -20,7 +20,8 @@ import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { PaisesListadoComponent } from './componentes/paises-listado/paises-listado.component';
 import { DetallePaisComponent } from './componentes/detalle-pais/detalle-pais.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component'
+import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.component';
+import { DetalleActorComponent } from './componentes/detalle-actor/detalle-actor.component'
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { TablaPaisesComponent } from './componentes/tabla-paises/tabla-paises.co
     CabeceraComponent,
     PaisesListadoComponent,
     DetallePaisComponent,
-    TablaPaisesComponent
+    TablaPaisesComponent,
+    DetalleActorComponent
   ],
   imports: [
     BrowserModule,

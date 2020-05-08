@@ -22,4 +22,21 @@ export class ActorService {
   obtenerActores(){
     return  this.actores;
   }
+
+  altaActor(actor:Actor){
+    this.actores.push( actor );
+    localStorage.setItem('actores',JSON.stringify(this.actores));
+
+  }
+
+  obtenerId(){
+    let minimo=0;
+    this.actores.forEach(element => {
+      if(element.id > minimo)
+      {
+        minimo = element.id;
+      }
+    });
+    return minimo + 2;
+  }
 }
