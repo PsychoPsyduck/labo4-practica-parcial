@@ -1,4 +1,6 @@
-<button [routerLink]="['/Bienvenido']" routerLinkActive="router-link-active"  >volver Bienvenido</button>
+<app-cabecera></app-cabecera>
 
+<mat-card>
 
-<h1>Actor Alta</h1>
+    <app-tabla-paises [paises]="this.paises" ></app-tabla-paises>
+</mat-card>

@@ -4,5 +4,7 @@
     <mat-card-title>Tabla Paises</mat-card-title>
 
     <app-tabla-paises [paises]="this.paisesServicio" (paisSelected)="verDetalles($event)"></app-tabla-paises>
+    <app-detalle-pais [detallePais]="this.paisSeleccionado" (deshabilitarPais)="deshabilitandoPais($event)" ></app-detalle-pais> 
+
 
 </mat-card>

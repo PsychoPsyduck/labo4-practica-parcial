@@ -24,4 +24,8 @@ export class PaisesListadoComponent implements OnInit {
     this.paisSeleccionado = pais;
   }
 
+  deshabilitandoPais( paisADesabilitar ){
+
+
+  }
 }
